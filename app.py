@@ -103,7 +103,6 @@ class CustomerServiceBot:
             
             response = self.model.generate_content(prompt)
             
-            # Bersihkan response dari markdown formatting
             cleaned_response = self.clean_response(response.text)
             
             return cleaned_response
