@@ -5,8 +5,6 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             height: 100vh;
             display: flex;
             align-items: center;
@@ -26,7 +24,7 @@
         }
 
         .chat-header {
-            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            background: linear-gradient(135deg, #921717 0%, #cb2424 100%);
             color: white;
             padding: 20px;
             text-align: center;
@@ -58,7 +56,8 @@
             border-radius: 50%;
             background: #10b981;
             animation: pulse 2s infinite;
-        }
+            -webkit-animation: pulse 2s infinite;
+}
 
         @keyframes pulse {
             0% { opacity: 1; }
@@ -185,12 +184,12 @@
         }
 
         .input-field:focus {
-            border-color: #4f46e5;
+            border-color: #f52424;
         }
 
         .send-button {
             padding: 12px 20px;
-            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            background: linear-gradient(135deg, #ed3939 0%, #930a0a 100%);
             color: white;
             border: none;
             border-radius: 25px;
@@ -201,7 +200,12 @@
 
         .send-button:hover {
             transform: translateY(-2px);
-        }
+            opacity: 0.8;
+            -webkit-transform: translateY(-2px);
+            -moz-transform: translateY(-2px);
+            -ms-transform: translateY(-2px);
+            -o-transform: translateY(-2px);
+}
 
         .send-button:disabled {
             opacity: 0.5;

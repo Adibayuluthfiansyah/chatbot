@@ -1,7 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import google.generativeai as genai
-import json
 import datetime
 from typing import List, Dict, Optional
 import re
@@ -82,11 +81,8 @@ class CustomerServiceBot:
     
     def clean_response(self, response_text: str) -> str:
         """Membersihkan response dari markdown formatting"""
-        # Hapus markdown code blocks
         response_text = re.sub(r'```html\s*', '', response_text)
-        response_text = re.sub(r'```\s*', '', response_text)
-        
-        # Hapus markdown formatting lainnya yang tidak diinginkan
+        response_text = re.sub(r'```\s*', '', response_text)  
         response_text = re.sub(r'^\s*```.*?\n', '', response_text, flags=re.MULTILINE)
         
         return response_text.strip()
