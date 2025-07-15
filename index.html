@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore Indonesia - Customer Service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>🏪 TechStore Indonesia</h1>
+            <p>Customer Service Assistant</p>
+            <div class="status-indicator">
+                <div class="status-dot"></div>
+                <span style="font-size: 12px;">Online</span>
+            </div>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                <div class="message-avatar">🤖</div>
+                    <div class="message-content">
+                        <div>Selamat datang di TechStore Indonesia! 👋</div>
+                        <div style="margin-top: 8px; font-size: 12px; opacity: 0.8;">
+                            Jam operasional: 08:00-17:00 WIB<br>
+                            Saya siap membantu Anda dengan informasi produk dan layanan kami.
+                </div>
+</div>
+            </div>
+        </div>
+
+        <div class="typing-indicator" id="typingIndicator">
+            <div class="message-avatar">🤖</div>
+            <div class="typing-dots">
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+            </div>
+            <span style="font-size: 12px; color: #6b7280;">Bot sedang mengetik...</span>
+        </div>
+
+        <div class="chat-input">
+            <div class="input-container">
+                <input type="text" id="messageInput" class="input-field" placeholder="Ketik pesan Anda..." />
+                <button id="sendButton" class="send-button">Kirim</button>
+            </div>
+            <div class="quick-actions">
+                <div class="quick-action" onclick="sendQuickMessage('Tampilkan semua produk')">📋 Lihat Produk</div>
+                <div class="quick-action" onclick="sendQuickMessage('Stok laptop')">💻 Laptop</div>
+                <div class="quick-action" onclick="sendQuickMessage('Stok smartphone')">📱 Smartphone</div>
+                <div class="quick-action" onclick="sendQuickMessage('Jam operasional')">⏰ Jam Buka</div>
+                <div class="quick-action" onclick="sendQuickMessage('Cara pemesanan')">🛒 Cara Pesan</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
