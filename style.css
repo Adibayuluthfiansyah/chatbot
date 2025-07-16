@@ -48,13 +48,14 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            
         }
 
         .status-dot {
             width: 10px;
             height: 10px;
             border-radius: 50%;
-            background: #10b981;
+            background: #059669;
             animation: pulse 2s infinite;
             -webkit-animation: pulse 2s infinite;
 }
@@ -124,7 +125,7 @@
         }
 
         .message.bot .message-avatar {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            background: linear-gradient(135deg, rgb(16, 185, 129) 0%, #059669 100%);
             color: white;
         }
 
